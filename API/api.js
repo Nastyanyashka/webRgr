@@ -10,8 +10,7 @@ const axios = require('axios');
 // Делаем запрос пользователя с данным ID
 axios.get('https://www.codewars.com/api/v1/users/' + text.value)
   .then(function (response) {
-    
-    
+      resultBox.innerHTML = "";
       resultBox.innerHTML += "Логин пользвоателя: " + response.data.username + "<br />";
       resultBox.innerHTML += "Имя пользователя: " + response.data.name + "<br />";
       resultBox.innerHTML += "Очки чести: " + response.data.honor + "<br />";
